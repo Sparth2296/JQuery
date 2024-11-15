@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <p id="pera">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti nisi harum totam quia sequi dolor cum dolore quidem cumque magni, facere impedit sapiente? Eum, saepe. Animi fugiat blanditiis deleniti voluptatum.
+    </p>
+    <div class="box">
+        i an box
+        <img src="" alt="rr">
+    </div>
+    <script>
+      $(document).ready(function(){
+   
+      let myText = $('#pera').text();
+           console.log(myText);
+        
+        let box = $('.box').text();
+        console.log(box);
+        
+        let img = $('img').attr('src',"images/rr.jpg").attr('alt',"RR")
+
+        console.log(img);
+    })
+
+    </script>
+</body>
+</html>

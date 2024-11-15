@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="/jquery-3.7.1.min.js""></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    form {
+      width: 50%;
+      height: 600px;
+      color: black;
+      background-color: whitesmoke;
+      display: flex;
+      flex-direction: column;
+      border-radius: 25px;
+      padding: 5%;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    input {
+      width: 100%;
+      height: 30px;
+      border-radius: 25px;
+      padding: 10px;
+    }
+
+    #submit {
+      width: 100%;
+      height: 60px;
+      border-radius: 25px;
+    }
+
+    span {
+      margin: 15px;
+      width: auto;
+      height: auto;
+      border: 3px solid black;
+      background-color: rgba(0, 0, 0, 0.193);
+      display: none;
+      border-radius: 15px;
+      padding: 20px;
+    }
+    @media (max-width:426px) {
+      form{
+        width: 80%;
+        padding: 5%;
+      }
+      #submit{
+        height:40px
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <label>Name : </label><br />
+    <input type="text" id="name" />
+    <br /><br />
+
+    <label>Number : </label><br />
+    <input type="number" id="number" />
+    <br /><br />
+
+    <label>Email : </label><br />
+    <input type="email" id="email" />
+    <br /><br />
+
+    <label>Password : </label><br />
+    <input type="password" id="password" />
+    <br /><br />
+
+    <button type="submit" id="submit">Submit</button>
+  </form>
+
+  <script>
+    $(document).ready(() => {
+      $("#submit").click((event) => {
+        let span = $("span")
+        span.css("display", "block");
+        $("form").css("display", "none");
+        event.preventDefault();
+        let name = $("#name").val();
+        let number = $("#number").val();
+        let email = $("#email").val();
+        let password = $("#password").val();
+
+        span.append(
+          `Name :${name} <br> Number : ${number} <br> Email : ${email} <br> Password : ${password}`
+        );
+
+      });
+    });
+  </script>
+</body>
+
+</html>
