@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jquery-3.7.1.min.js"></script>
+    <style>
+        body{
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        h1{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 50px;
+            border: 3px solid black;
+            padding: 20px ;
+            font-weight: 300;
+            background-color: whitesmoke;
+            border-radius: 25px;
+        }
+        .btn{
+            position: fixed;
+            bottom: 80px;
+        }
+        button{
+            width: 150px;
+            height: 50px;
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        if(click == hide){<br>
+            this is hide <br>
+        }else if (click == show){ <br>
+            this is show <br>
+        }else{ <br>
+            by defaulte show <br>
+        }
+<br>
+</h1>
+       <div class="btn">
+        <button id="hide">HIDE</button>
+
+        <button id="show">SHOW</button>
+       </div>
+    
+       <script>
+        $(document).ready(()=>{
+
+            $("#hide").click(()=>{
+                $("h1").hide()
+            })
+
+            $("#show").click(()=>{
+                $("h1").show()
+            })
+
+        })
+       </script>
+</body>
+</html>
