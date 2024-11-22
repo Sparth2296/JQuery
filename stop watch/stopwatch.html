@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./stylesheet.css">
+  <script src="./jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <video src="./video/vecteezy_digital-background-motion-graphics_31691470.mp4" loop></video>
+  <audio src="./audio/watch-ticking-69213.mp3" loop></audio>
+  <nav>
+    <h1>StopWatch</h1>
+    <i class="fa-solid fa-bars"></i>
+  </nav>
+
+  <div class="main-container">
+    <div class="round-box">
+      <div class="round">
+        <h2 id="min"></h2>
+        
+        <h2 id="sec"></h2>
+        
+        <h2 id="micro"></h2>
+      </div>
+    </div>
+    <div class="midd-box">
+      <button class="reset-btn">
+        <i class="fa-solid fa-rotate-left"></i>
+      </button>
+      <button class="stop-btn">
+        <i class="fa-solid fa-stop"></i>
+      </button>
+      <button class="start-btn">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+    <div class="cmtMainBOx">
+      <h2></h2>
+    <div class="coment-box">
+
+    </div>
+  </div>
+
+  </div>
+  <script>
+    $(document).ready(() => {
+      
+      let minte = $("#min");
+      let second = $("#sec");
+      let microsec = $("#micro");
+
+      minte.text(`00 : `)
+      second.text(`00 : `)
+      microsec.text(`00`)
+
+      let reset = $(".reset-btn");
+      let stop = $(".stop-btn");
+      let start = $(".start-btn");
+
+      let countMin = 0;
+      let countSec = 0;
+      let countMicro = 0;
+
+      let comment = $(".coment-box");
+      let lastTime;
+      let timer;
+      function microupadet() {
+        microsec.text((countMicro < 10) ? `0${countMicro}` : `${countMicro}`);
+      }
+
+      function secupadet() {
+        second.text((countSec < 10) ? `0${countSec} : ` : `${countSec} : `);
+      }
+      function minupadet() {
+        minte.text((countMin < 10) ? `0${countMin} : ` : `${countMin} : `);
+      }
+
+      function resettime() {
+        countSec = 0
+        countMicro = 0;
+        countMin = 0;
+      }
+      function time() {
+
+        timer = setInterval(() => {
+          countMicro++;
+          microupadet()
+
+          if (countMicro == 100) {
+            countMicro = 0;
+            countSec++;
+            secupadet()
+
+            if (countSec == 60) {
+              countSec = 0;
+              countMin++;
+              minupadet()
+
+              if (countMin == 60) {
+                countMin = 0;
+
+              }
+            }
+          }
+        }, 10);
+      }
+      start.click(() => {
+        $("video").trigger("play");
+        $("audio").trigger("play");
+        time()
+      });
+
+      stop.click(() => {
+        clearInterval(timer)
+        $("video").trigger("pause");
+        $("audio").trigger("pause");
+
+      });
+
+      reset.click(() => {
+        lastTime=`${countMin} : ${countSec} : ${countMicro} <br>`
+        comment.append(lastTime);
+        clearInterval(timer)
+        resettime()
+        microupadet()
+        secupadet()
+        minupadet()
+        $("video").trigger("pause");
+        $("audio").trigger("pause");
+      })
+    });
+  </script>
+</body>
+
+</html>

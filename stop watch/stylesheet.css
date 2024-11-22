@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'LED';
+    src: url('LED.woff2') format('woff2'),
+        url('LED.woff') format('woff');
+    font-weight: 100;
+    font-style:oblique;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LED1';
+    src: url('LED.woff2') format('woff2'),
+        url('LED.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LED3';
+    src: url('LED.woff2') format('woff2'),
+        url('LED.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+  }
+
+  video {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+  }
+
+  nav {
+    width: 90%;
+    z-index: 20;
+    height: 70px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin: 0px auto;
+  }
+
+  i {
+    z-index: 50;
+  }
+
+  .main-container {
+    min-width: 310px;
+    z-index: 20;
+
+    max-width: 850px;
+    height: 80vh;
+    margin: 20px auto;
+    backdrop-filter: blur("10px");
+  }
+
+  .round-box {
+    width: 70%;
+    height: 60%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+  }
+
+  .round {
+    border: 10px double lightskyblue;
+    display: flex;
+    width: 370px;
+    z-index: 20;
+    border-radius: 50%;
+    height: 370px;
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  #min,#micro,#sec{
+    width: 25%;
+    font-size: 3rem;
+    font-family: 'LED';
+  }
+  .midd-box {
+    width: 40%;
+    height: 10%;
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-around;
+    z-index: 20;
+    align-items: center;
+  }
+  .stop-btn,.start-btn,.reset-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: white;
+    background-color: lightskyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    font-size: 2rem;
+    border: none;
+    transition: all 0.3s ease;
+  }
+  .reset-btn:hover{
+      background-color: black;
+      transition: all 0.3s ease;
+    }
+    .start-btn:hover{
+        transition: all 0.3s ease;
+        background-color: black;
+    }
+    .stop-btn:hover{
+        transition: all 0.3s ease;
+        background-color: black;
+  }
+  h1 {
+    z-index: 20;
+  }
+  .coment-box {
+    width: 25%;
+    height: 26%;
+    bottom: 20px;
+    left: 38%;
+    position: absolute;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.235);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    font-size: 2rem;
+    overflow-y: scroll;
+    font-family: 'LED';
+  }
+  

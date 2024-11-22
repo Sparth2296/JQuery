@@ -1,75 +1,77 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 .container {
-    background-color: white;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0 auto;
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
 }
 nav {
-    width: 100%;
-    height: 70px;
-    background-color: rgb(233, 232, 232);
-    display: flex;
-    justify-content: flex-end;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(233, 232, 232);
+  display: flex;
+  justify-content: flex-end;
 }
 button {
-    width: 50px;
-    height: 50px;
-    border: none;
-    outline: none;
-    font-size: 1.5rem;
-    margin-top: 8px;
-    margin-right: 10px;
-    background-color: white;
-    border-radius: 10px;
-    transition: all 0.5s ease;
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  margin-top: 8px;
+  margin-right: 10px;
+  background-color: white;
+  border-radius: 10px;
+  transition: all 0.5s ease;
 }
 button:hover {
-    scale: 1.1;
-    background-color: black;
-    color: white;
-    transition: all 0.5s ease;
+  scale: 1.1;
+  background-color: black;
+  color: white;
+  transition: all 0.5s ease;
 }
 ul {
-    width: 230px;
-    height: 100vh;
-    transition: all 1s ease;
-    background-color: rgba(128, 128, 128, 0.466);
-    transform: translateX(-220px);
+  width: 230px;
+  height: 100vh;
+  transition: all 1s ease;
+  background-color: rgba(128, 128, 128, 0.466);
+  transform: translateX(-230px);
 }
 li {
-    padding: 20px 35px;
-    word-spacing: 10px;
-    font-size: 1.5rem;
-    position: relative;
-    top: 30px;
+  padding: 20px 35px;
+  word-spacing: 10px;
+  font-size: 1.5rem;
+  position: relative;
+  top: 30px;
 }
 li:hover {
-    color: white;
-    transition: all 0.5s ease;
-    background-color: black;
+  color: white;
+  transition: all 0.5s ease;
+  background-color: black;
 }
-li:hover i {color: cyan;}
+li:hover i {
+  color: cyan;
+}
 
-ul li:nth-child(1){
-    transition: all 1.4s ease;
+ul li:nth-child(1) {
+  transition: all 0.9s ease;
 }
-ul li:nth-child(2){
-    transition: all 1.1s ease;
+ul li:nth-child(2) {
+  transition: all 0.8s ease;
 }
-ul li:nth-child(3){
-    transition: all 0.8s ease;
+ul li:nth-child(3) {
+  transition: all 0.7s ease;
 }
-ul li:nth-child(4){
-    transition: all 0.6s ease;
+ul li:nth-child(4) {
+  transition: all 0.5s ease;
 }
-ul li:nth-child(5){
-    transition: all 0.4s ease;
+ul li:nth-child(5) {
+  transition: all 0.4s ease;
 }

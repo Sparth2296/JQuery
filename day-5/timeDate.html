@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            width: 400px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            background-color: gray;
+            border-radius: 15px;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    
+    <script>
+        $(document).ready(()=>{
+            function updetionTIme(){
+                let dateVar = new Date();
+
+                let timeVar = dateVar.toLocaleString();
+
+                $('h1').text(timeVar);
+            }
+            setInterval(updetionTIme,1000)
+        })
+    </script>
+</body>
+</html>
